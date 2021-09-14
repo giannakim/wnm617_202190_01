@@ -863,12 +863,38 @@ span.badge:not(:empty)::before {
   	transition-duration: 0.9s;
 }
 
+.name-sm a{
+	margin-left: -3px;
+	font-family: "Bilo", sans-serif;
+	line-height: 1em;
+	letter-spacing: -0.01em;
+	font-size: 60px;
+	font-weight: 400;
+	color: var(--color-main-light);
+	text-decoration: none;
+  	background-image: none;
+  	position: relative;
+  	max-width: 200px;
+	text-shadow: -1px 1px 0 #045D19,0.5px 0.5px 0 #045D19,0.5px -0.5px 0 #045D19,-0.5px -0.5px 0 #045D19;
+}
+
+
+.name-sm a:hover{
+	color: var(--color-main-medium);
+  	transition-duration: 0.9s;
+}
+
+
+
+
+
+
 .logo a{
 	color: var(--color-main-dark);
 	line-height: var(--header-height); 
 	font-weight: 400;
 	font-size: 20px;
-	line-height: var(--header-height);
+	
 	
 }
 
@@ -891,6 +917,7 @@ span.badge:not(:empty)::before {
 	font-size: 22px;
 	font-weight: 300;
 	margin-top: 30px;
+	line-height: 1.7em;
 	color: var(--color-main-dark);
 }
 
@@ -899,6 +926,7 @@ span.badge:not(:empty)::before {
 	font-weight: 300;
 	margin-top: 30px;
 	text-decoration: underline 1px;
+	flex-wrap: wrap;
 }
 
 

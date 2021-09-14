@@ -3,7 +3,7 @@
 <header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-none">
-				<div class="logo"><a href="about.php">
+				<div class="logo" style="margin-top: 3px;"><a href="index.php">
 					Gianna Kim
 				</a></div>
 			</div>

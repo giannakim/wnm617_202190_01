@@ -21,18 +21,17 @@ include_once "parts/templates.php";
 
     <div class="container">
         <div class="card">
-            <div class="head-sub">2021</div>
-            <div class="head-border"></div>
-            <div class="name" style="margin-top: 30px;">
-                <a>Gianna Kim</a>
+            
+            <div class="name-sm" style="margin-top: 30px;">
+                <a>Hello!</a>
             </div>
             <div class="greeting">
-                I am a visual designer based in the Bay Area focusing on user psychology and observation to connect them to products.<br> Currently, I am pursuing my master’s degree at the Academy of Art University. I am also working as a UI/UX designer intern at Intellext which is a start-up company that develops AI for helping negotiation.
+            
+                My vision as a designer is to encourage users through my visual design in their everyday lives. As Julia Child introduced French cuisine to Americans and motivated them to cook French food at home, I seek to positively influence users’ minds in a similar fashion through my design.🖤<br><br>
+
+                You can check my journey in detail ↓
             </div>
-            <div class="link">
-                <a class="resume flex-justify-start">Resume</a>
-                <a class="linkedin flex-justify-center">Linkedin</a>
-            </div>
+          
             
         </div>
 
