@@ -1,0 +1,147 @@
+body {
+    font: 16px/26px Inter, sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    color: black;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #FAE4BA;
+}
+
+.title {
+    font-size: 20px;
+    text-transform: uppercase;
+    height: 100px;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,h2,h3 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    margin-top: -30px;
+    overflow: hidden;
+    /**border-bottom: 1px solid #4c2918;
+    border-top: 1px solid #4c2918;**/
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    float: left;
+    margin-bottom: 10px;
+}
+
+li a {
+    padding:  7px;
+    text-decoration: none;
+    color: black;
+    border: .5px solid black;
+    border-radius: 5px;
+    width: 100%;
+    margin: 20px;
+    font-weight: 500;
+}
+
+li a:hover {
+    background: #FFEECE;
+    box-shadow: 9px 15px 17px -3px rgba(152, 131, 90, 0.24);
+}
+
+
+
+.main article {
+    margin-right: 30px;
+    width: 40%;
+    float: right;
+}
+
+.main aside {
+    width: 40%;
+    padding:  30px;
+    background: #F8C5E3;
+    height: 70%;
+    margin-top: 30px;
+    box-shadow: 9px 15px 17px -3px rgba(152, 131, 90, 0.24);
+}
+
+.main aside:hover {
+    padding:  30px;
+    background: #FFA9DC;
+    box-shadow: -15px -3px 17px -3px rgba(191, 149, 68, 0.4);
+}
+
+
+
+
+article h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 1.4em;;
+}
+
+article header p {
+    font-size: 25px;
+    line-height: 1.4em;
+}
+
+
+section h2 {
+    margin-top: 70px;
+}
+
+article footer h3 {
+    font-size: 22px;
+    margin-top: 70px;
+    height: 40%;
+}
+
+.footer-container {
+    position: relative;
+    height: 100px;
+    margin-top: 100px;
+    background-color: #FFE1A7;
+    clear: both;
+}
+
+.footer-container footer {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-container footer h3 {
+    font-size: 19px;
+    height: 100%;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFE1A7;
+}
+
+
