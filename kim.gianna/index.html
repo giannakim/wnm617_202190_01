@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Daily Caffè</title>
+
+	<base href="/aau/wnm617/kim.gianna/">
+
+	<link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	
+	<script src="lib/js/jquery-2.2.4.min.js"></script>
+
+	<script src="js/app.js"></script>
+	<script src="js/signin.js"></script>
+
+	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+	<section data-role="page" id="page-signin">
+		<div data-role="main" class="display-flex flex-vertical">
+			<div class="logo-img">
+				
+			</div>
+
+			<div class="flex-stretch"></div>
+			<form data-ajax="false" class="form signin-form" id="signin-form" style="padding:10px;">
+				<div class="phrase">
+				Sign In
+				</div>
+				<div class="form-control">
+					<input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Username">
+				</div>
+				<div class="form-control">
+					<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
+				</div>
+				<div class="form-control">
+					<input type="submit" value="Sign In" class="form-button-dark">
+				</div>
+				<div class="form-control small centered" style="margin-bottom:0px;">
+					Need a new account?<a href="#page-signup"> Sign Up</a>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<section data-role="page" id="page-signup">
+		<div data-role="main" class="display-flex flex-vertical">
+			<div class="flex-stretch"></div>
+			<form data-ajax="false" class="form signin-form" id="signup-form" style="padding:10px;">
+				<div class="phrase">
+				Sign Up
+				</div>
+				<div class="form-control">
+					<label for="signup-email" class="form-label">Email Address</label>
+					<input class="form-input" type="text" id="signup-email" data-role="none" placeholder="Email">
+				</div>
+				<div class="form-control">
+					<label for="signup-password" class="form-label">New Password</label>
+					<input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Password">
+				</div>
+				<div class="form-control">
+					<label for="signup-password2" class="form-label">Confirm Password</label>
+					<input class="form-input" type="password" id="signup-password2" data-role="none" placeholder="Confirm">
+				</div>
+				<div class="form-control">
+					<input type="submit" value="Sign Up" class="form-button-dark">
+				</div>
+				<div class="form-control small centered">
+					Already have an account?<a href="#page-signin"> Sign In</a>
+				</div>
+			</form>
+			<div class="flex-stretch"></div>
+		</div>
+	</section>
+
+
+<!--MAIN PAGE-->
+
+	<section data-role="page" id="page-recent">
+		<header data-role="header">
+			<h1>Hello Gianna,</h1>
+		</header>
+
+
+		<div data-role="main">
+			<div class="map"></div>
+
+			<!--<div class="floater bottom top">
+				<a href="#" class="btn-radius" data-activate="#recent-add-modal" style="margin-bottom: -30px;">
+				&#61; 
+				</a>
+			</div>
+		-->
+
+			<!--Modal left-->
+			<div class="modal" id="recent-add-modal0">
+				<div class="modal-back" data-deactivate="#recent-add-modal0"></div>
+				<div class="modal-drawer top">
+					<div class="modal-head display-flex">
+						<div class="flex-stretch">Drawer</div>
+						<div class="flex-none">
+							<img src="img/icon/close.svg" class="icon" data-deactivate="#recent-add-modal0">
+						</div>
+					</div>
+					<div class="modal-body">
+						<a href="#page-user-profile">Profile</a>
+					</div>
+					<div class="modal-body">
+						<button class="form-button js-logout">Log Out</button>
+					</div>
+				</div>
+			</div>	
+
+		</div>
+
+
+		<footer data-role="footer">
+			<ul>
+				<li><a href="#page-recent">Home</a></li>
+				<li><a href="#page-list">List</a></li>
+				<li>
+					<a href="#" data-activate="#recent-add-modal0">Menu</a>
+				</li>
+			</ul>
+		</footer>
+
+		
+	</section>
+
+<!--LIST PAGE-->
+
+	<section data-role="page" id="page-list">
+		<header data-role="header">
+			<h1>Lists</h1>
+		</header>
+
+		<div data-role="main">
+			
+			<div class="overscroll floater fill-parent">
+				<ul>
+					<!-- li*10>a[href=#page-cafe-profile]{Cafe $} -->
+					<li><a href="#page-cafe-profile">Cafe 1</a></li>
+					<li><a href="#page-cafe-profile">Cafe 2</a></li>
+					<li><a href="#page-cafe-profile">Cafe 3</a></li>
+					<li><a href="#page-cafe-profile">Cafe 4</a></li>
+					<li><a href="#page-cafe-profile">Cafe 5</a></li>
+					<li><a href="#page-cafe-profile">Cafe 6</a></li>
+					<li><a href="#page-cafe-profile">Cafe 7</a></li>
+					<li><a href="#page-cafe-profile">Cafe 8</a></li>
+					<li><a href="#page-cafe-profile">Cafe 9</a></li>
+					<li><a href="#page-cafe-profile">Cafe 10</a></li>
+					<li><a href="#page-cafe-profile">Cafe 11</a></li>
+					<li><a href="#page-cafe-profile">Cafe 12</a></li>
+					<li><a href="#page-cafe-profile">Cafe 13</a></li>
+					<li><a href="#page-cafe-profile">Cafe 14</a></li>
+					<li><a href="#page-cafe-profile">Cafe 15</a></li>
+					<li><a href="#page-cafe-profile">Cafe 16</a></li>
+					<li><a href="#page-cafe-profile">Cafe 17</a></li>
+					<li><a href="#page-cafe-profile">Cafe 18</a></li>
+					<li><a href="#page-cafe-profile">Cafe 19</a></li>
+					<li><a href="#page-cafe-profile">Cafe 20</a></li>
+					<li><a href="#page-cafe-profile">Cafe 21</a></li>
+					<li><a href="#page-cafe-profile">Cafe 22</a></li>
+					<li><a href="#page-cafe-profile">Cafe 23</a></li>
+					<li><a href="#page-cafe-profile">Cafe 24</a></li>
+					<li><a href="#page-cafe-profile">Cafe 25</a></li>
+					<li><a href="#page-cafe-profile">Cafe 26</a></li>
+					<li><a href="#page-cafe-profile">Cafe 27</a></li>
+					<li><a href="#page-cafe-profile">Cafe 28</a></li>
+					<li><a href="#page-cafe-profile">Cafe 29</a></li>
+					<li><a href="#page-cafe-profile">Cafe 30</a></li>
+					<li><a href="#page-cafe-profile">Cafe 31</a></li>
+					<li><a href="#page-cafe-profile">Cafe 32</a></li>
+					<li><a href="#page-cafe-profile">Cafe 33</a></li>
+					<li><a href="#page-cafe-profile">Cafe 34</a></li>
+					<li><a href="#page-cafe-profile">Cafe 35</a></li>
+					<li><a href="#page-cafe-profile">Cafe 36</a></li>
+					<li><a href="#page-cafe-profile">Cafe 37</a></li>
+					<li><a href="#page-cafe-profile">Cafe 38</a></li>
+					<li><a href="#page-cafe-profile">Cafe 39</a></li>
+					<li><a href="#page-cafe-profile">Cafe 40</a></li>
+					<li><a href="#page-cafe-profile">Cafe 41</a></li>
+					<li><a href="#page-cafe-profile">Cafe 42</a></li>
+					<li><a href="#page-cafe-profile">Cafe 43</a></li>
+					<li><a href="#page-cafe-profile">Cafe 44</a></li>
+					<li><a href="#page-cafe-profile">Cafe 45</a></li>
+					<li><a href="#page-cafe-profile">Cafe 46</a></li>
+					<li><a href="#page-cafe-profile">Cafe 47</a></li>
+					<li><a href="#page-cafe-profile">Cafe 48</a></li>
+					<li><a href="#page-cafe-profile">Cafe 49</a></li>
+					<li><a href="#page-cafe-profile">Cafe 50</a></li>	
+					<li><a href="#page-cafe-profile">Bluebottle</a></li>
+					<li><a href="#page-cafe-profile">The Press</a></li>
+					<li><a href="#page-cafe-profile">Peets Coffee</a></li>
+					<li><a href="#page-cafe-profile">Philz Coffee</a></li>
+					<li><a href="#page-cafe-profile">Caffe Vergnano</a></li>
+					<li><a href="#page-cafe-profile">Florian Cafe</a></li>
+					<li><a href="#page-cafe-profile">Cafe Omotesando</a></li>
+					<li><a href="#page-cafe-profile">Starbucks</a></li>
+				</ul>
+			</div>
+
+			<div class="floater bottom right">
+				<a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
+			</div>
+		</div>
+
+		<!--MODAL DRAWER-->
+		<div class="modal" id="recent-add-modal-list">
+			<div class="modal-back" data-deactivate="#recent-add-modal-list"></div>
+			<div class="modal-drawer top">
+				<div class="modal-head display-flex">
+					<div class="flex-stretch">Drawer</div>
+					<div class="flex-none">
+						<img src="img/icon/close.svg" class="icon" data-deactivate="#recent-add-modal-list">
+					</div>
+				</div>
+				<div class="modal-body">
+					<a href="#page-user-profile">Profile</a>
+				</div>
+				<div class="modal-body">
+					<button class="form-button js-logout">Log Out</button>
+				</div>
+			</div>
+		</div>	
+
+		<footer data-role="footer">
+			<ul>
+				<li><a href="#page-recent">Home</a></li>
+				<li><a href="#page-list">List</a></li>
+				<li>
+					<a href="#" data-activate="#recent-add-modal-list">Menu</a>
+				</li>
+			</ul>
+		</footer>
+
+
+
+<!--MODAL POPUP-->
+		<div class="modal" id="list-add-modal">
+			<div class="modal-back" data-deactivate="#list-add-modal"></div>
+			<form class="modal-popup form" id="list-add-form" data-ajax="false">
+				<div class="modal-head">Add Cafe</div>
+
+				<div class="modal-body">
+					<div class="form-control">
+						<label for="list-add-name" class="form-label">Name</label>
+						<input type="text" name="list-add-name" class="form-input" data-role="none"placeholder="Name">
+					</div>
+
+					<div class="form-control">
+						<label for="list-add-type" class="form-label">Drink</label>
+						<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Drink">
+					</div>
+				</div>
+
+				<div class="modal-foot">
+					<button type="submit" class="form-button">Save</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+<!--USER PROFILE-->
+
+	<section data-role="page" id="page-user-profile">
+		<header data-role="header">
+			<h1>Profile</h1>
+		</header>
+
+		<div data-role="main">
+			<h2>Name</h2>
+			<h2>Email</h2>
+		</div>
+
+		<!--MODAL DRAWER-->
+		<div class="modal" id="recent-add-modal-user">
+			<div class="modal-back" data-deactivate="#recent-add-modal-user"></div>
+			<div class="modal-drawer top">
+				<div class="modal-head display-flex">
+					<div class="flex-stretch">Drawer</div>
+					<div class="flex-none">
+						<img src="img/icon/close.svg" class="icon" data-deactivate="#recent-add-modal-user">
+					</div>
+				</div>
+				<div class="modal-body">
+					<a href="#page-user-profile">Profile</a>
+				</div>
+				<div class="modal-body">
+					<button class="form-button js-logout">Log Out</button>
+				</div>
+			</div>
+		</div>	
+
+
+		<footer data-role="footer">
+			<ul>
+				<li><a href="#page-recent">Home</a></li>
+				<li><a href="#page-list">List</a></li>
+				<li>
+					<a href="#" data-activate="#recent-add-modal-user">Menu</a>
+				</li>
+			</ul>
+		</footer>
+
+
+
+	</section>
+
+<!--CAFE PROFILE-->
+	<section data-role="page" id="page-cafe-profile">
+		<header data-role="header">
+			<h1>Cafe!</h1>
+			<ul>
+				<li>
+					<a href="#" data-rel="back">Back</a>
+				</li>
+			</ul>
+		</header>
+
+		<div data-role="main">
+			
+			<h2>Name</h2>
+			<h2>Address</h2>
+		
+			
+		</div>
+
+
+		<!--MODAL DRAWER-->
+		<div class="modal" id="recent-add-modal-cafe">
+			<div class="modal-back" data-deactivate="#recent-add-modal-cafe"></div>
+			<div class="modal-drawer top">
+				<div class="modal-head display-flex">
+					<div class="flex-stretch">Drawer</div>
+					<div class="flex-none">
+						<img src="img/icon/close.svg" class="icon" data-deactivate="#recent-add-modal-cafe">
+					</div>
+				</div>
+				<div class="modal-body">
+					<a href="#page-user-profile">Profile</a>
+				</div>
+				<div class="modal-body">
+					<button class="form-button js-logout">Log Out</button>
+				</div>
+			</div>
+		</div>	
+
+		<footer data-role="footer">
+			<ul>
+				<li><a href="#page-recent">Home</a></li>
+				<li><a href="#page-list">List</a></li>
+				<li>
+					<a href="#" data-activate="#recent-add-modal-cafe">Menu</a>
+				</li>
+			</ul>
+		</footer>
+	</section>
+
+
+
+	
+</body>
+</html>

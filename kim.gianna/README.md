@@ -2,9 +2,6 @@ Gianna Kim
 
 # Relevant Links
 
-
-
-
 - http://giannakim.com/aau/wnm617/kim.gianna/about.php
 - http://giannakim.com/aau/wnm617/kim.gianna/index.php
 - http://giannakim.com/aau/wnm617/kim.gianna/index.html
