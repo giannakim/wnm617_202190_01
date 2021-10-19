@@ -1,5 +1,5 @@
 :root {
-	--color-sub-light:  #fff7d8;
+	--color-sub-light:  #f6f3e7;
 	--color-sub-medium:  #FDD485;
 
 	--color-sub-dark:  #faa707;
@@ -19,8 +19,8 @@
 
 	-font-sans: 'Dosis', 'Inter', sans-serif;
 
-	--header-height: 3rem;
-	--footer-height: 4rem;
+	--header-height: 4rem;
+	--footer-height: 4.6rem;
 }
 
 
@@ -30,24 +30,32 @@
 
 /*CORE ELEMENTS*/
 
+
+
 a {
 	color: inherit;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 400;
 }
 
 body {
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-sub-light);
 	color: var(--color-main-dark);
 	font-family: Dosis, sans-serif;
 }
 
-h2 {
-	padding: 15px;
+h3,h4,h5,p {	
+	font-weight: 400;
 }
 
-
+.h2-light {
+	font-weight: 300;
+}
 /*LAYOUT CLASSES*/
+.border {
+	border: 0.5px solid #d0d0d0;
+	margin-top: 10px;
+}
 
 .hidden { display:none; }
 
@@ -98,6 +106,16 @@ h2 {
 	/*****position: relative;->map image resized well*/
 	font-size: 1em;
 	overflow: hidden;
+
+	width: 100%;
+	justify-content: center;
+	overflow-wrap: anywhere;
+}
+
+
+.main-detail {
+	padding-left: 22px;
+	padding-right: 22px;
 }
 
 
@@ -114,7 +132,20 @@ h2 {
 	border-width: 0;
 	position: relative;
 	overflow: hidden;
+  	/*border-bottom-left-radius: 50%;
+  	border-bottom-right-radius: 50%;*/
+  	box-shadow: none;
 }
+
+.img-cafe-profile {
+	background-image: url(../img/bluebottle.jpg);
+	border-radius: 0 0 35% 35%;
+  	height: 200px;
+  	background-position: center;
+  	background-size: 600px;
+    background-repeat: no-repeat;
+}
+
 
 
 [data-role="footer"] {
@@ -122,12 +153,11 @@ h2 {
 	height: var(--footer-height);
 	line-height: var(--footer-height);
 	border-width: 0;
-	
-	box-shadow: 0 0 5px #462e00;
+	box-shadow: 0 0 5px #cec8bd;
 	position: relative;
 	overflow: hidden;
-}
 
+}
 
 
 
@@ -155,12 +185,27 @@ h2 {
 [data-role="footer"] li {
 	flex: 1 1 auto;
 	text-align: center;
-	background-color: var(--color-main-dark);
-	color: white;
+	background-color: #fffcf4;
+	color: inherit;
+
 }
 
-.ui-header .ui-title {
+[data-role="footer"] ul li:active a {
+	background-color: var(--color-main-light);
+}
 
+
+
+.main-center {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.ui-header .ui-title {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -221,6 +266,7 @@ h2 {
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+
 }
 
 /*signin,signup button*/
@@ -239,6 +285,8 @@ h2 {
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+    -webkit-appearance: none;
+
 }
 
 
@@ -262,15 +310,14 @@ h2 {
 	background-position: center;
 }
 
+
 .logo-img  {
+	
 	text-align: center;
-	background-image: url(../img/logo.png);
 	background-size: contain;
 	background-position: 50% 0;
-	margin-top: 55%;
-
 	background-repeat: no-repeat;
-	height: 150px;
+	height: 90%;
 }
 
 #page-signin {
@@ -374,9 +421,10 @@ h2 {
 
 .modal-head,
 .modal-foot {
-	background-color: var(--color-sub-light);
+	background-color: var(--color-main-light);
 	line-height: 2rem;
 	padding: 0 1em;
+	color: white;
 
 }
 
@@ -441,18 +489,152 @@ h2 {
 	font-size: 40px;
 	color: var(--color-main-medium);
 	position: relative;
-
     left: 0;
     width: 100%;
-
     text-align: center;
     margin: 0;
  
 }
 
 
+/*LIST ITEM*/
+
+.wholelist{
+	margin: 0 auto;
+	padding-left: 0;
+	padding-right: 20px;
+	width: 100%;
+}
+
+.list-card {
+	display: flex;
+	width: 100%;
+	height: 110px;
+	background-color: white;
+	margin-bottom: 0.3em;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	direction: rtl;
+}
+
+.list-link {
+	display: flex;
+	width: 100%;
+	height: 110px;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+}
+
+.text-wrapper {
+	width: 100%;
+	height: 110px;
+	direction: ltr;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-container {
+	display: flex;
+	direction: ltr;
+	width: 100%;
+}
+
+.list-img {
+	width: 200px;
+	object-fit: cover;
+
+}
 
 
+/*CAFE PROFILE*/
+.line-one {
+	display: flex;
+	justify-content: right;
+	line-height: 2em;
+}
+
+/*PROFILE */
+
+.line-left {
+	display: flex;
+	justify-content: left;
+	line-height: 2em;
+}
+
+.profile-img {
+	width: 150px;
+	margin-left: -10px;
+}
+
+.username {
+	font-size: 1.4em;
+	margin-top: 4.7em;
+}
+
+.title-paragraph {
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+
+.paragraph {
+	font-size: 1.1em;
+	font-weight: 300;
+	text-align: left;
+}
+
+.space {
+	flex: 1 1 auto;
+	height: 40px;
+}
+
+.edit {
+	color: grey;
+	font-size: 0.95em;
+	font-weight: 300;
+	vertical-align: middle;
+	padding: 10px;
+	height: 100%;
+
+}
+
+
+
+
+
+
+
+/*ICONS*/ 
+
+.nav-icon {
+    display: block;
+    line-height: 1rem;
+    color: black;
+    height: 130px;
+  
+}
+
+.icon-img {
+	width: 2rem;
+	display: inline-block;
+	margin-top: 0.5em;
+}
+
+.icon-text {
+	font-weight: 600;
+	font-size: 0.9em;
+}
+
+
+/*MAIN MAP*/
+.flag {
+	position: absolute;
+	height: 40px;
+	top: 200px;
+	left: 40px;
+	overflow: hidden;
+}
 
 
 

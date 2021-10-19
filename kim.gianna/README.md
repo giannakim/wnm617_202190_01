@@ -7,6 +7,7 @@ Gianna Kim
 - http://giannakim.com/aau/wnm617/kim.gianna/index.html
 
 
+
 ## Side assignments
 
 - http://www.giannakim.com/aau/wnm617/kim.gianna/initializr/

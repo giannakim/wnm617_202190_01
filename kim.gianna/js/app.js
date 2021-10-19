@@ -47,4 +47,11 @@ $(()=>{
 	})
 
 
+
+
+	 $("[data-template]").each(function(){
+    let target = $(this).data("template");
+    $(this).html($(target).html());
+  })
+
 });
