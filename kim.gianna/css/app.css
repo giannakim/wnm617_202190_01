@@ -502,7 +502,7 @@ h3,h4,h5,p {
 .wholelist{
 	margin: 0 auto;
 	padding-left: 0;
-	padding-right: 20px;
+	/*padding-right: 20px;*/
 	width: 100%;
 }
 
@@ -512,9 +512,9 @@ h3,h4,h5,p {
 	height: 110px;
 	background-color: white;
 	margin-bottom: 0.3em;
-	border-top-right-radius: 40px;
+	/*border-top-right-radius: 40px;
 	border-bottom-right-radius: 40px;
-	direction: rtl;
+	direction: rtl;*/
 }
 
 .list-link {
