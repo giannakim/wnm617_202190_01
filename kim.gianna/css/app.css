@@ -1,6 +1,6 @@
 :root {
 	--color-sub-light:  #f6f3e7;
-	--color-sub-medium:  #FDD485;
+	--color-sub-medium:  #f5e2ae;
 
 	--color-sub-dark:  #faa707;
 
@@ -9,7 +9,7 @@
 	--color-main-dark:  #151260;
 
 	--color-neutral-light: #fffcf4;
-	--color-neutral-medium: #f5e2ae;
+	--color-neutral-medium: #c1b9a2;
 	--color-neutral-dark: #b97c06;
 
 
@@ -43,6 +43,9 @@ body {
 	color: var(--color-main-dark);
 	font-family: Dosis, sans-serif;
 }
+
+
+
 
 h3,h4,h5,p {	
 	font-weight: 400;
@@ -106,7 +109,6 @@ h3,h4,h5,p {
 	/*****position: relative;->map image resized well*/
 	font-size: 1em;
 	overflow: hidden;
-
 	width: 100%;
 	justify-content: center;
 	overflow-wrap: anywhere;
@@ -137,14 +139,6 @@ h3,h4,h5,p {
   	box-shadow: none;
 }
 
-.img-cafe-profile {
-	background-image: url(../img/bluebottle.jpg);
-	border-radius: 0 0 35% 35%;
-  	height: 200px;
-  	background-position: center;
-  	background-size: 600px;
-    background-repeat: no-repeat;
-}
 
 
 
@@ -176,10 +170,16 @@ h3,h4,h5,p {
 }
 
 [data-role="header"] a {
-	padding: 0 1em;
+	padding: 0 1.3em;
 }
 
-
+ul li .right {
+	right: 0;
+	top: 0;
+	position: absolute;
+	color: #ba2929;
+	font-weight: 300;
+}
 
 
 [data-role="footer"] li {
@@ -213,8 +213,10 @@ h3,h4,h5,p {
 	height: 100%;
 	text-align: center;
 	margin: 0;
-	font-size: 1rem;
+	font-size: 1.1rem;
+	font-weight: 400;
 	padding: 0;
+	margin-top: -.1em;
 }
 
 
@@ -276,17 +278,33 @@ h3,h4,h5,p {
     border-width: 0;
     background-color: var(--color-main-dark);
     color: white;
-  
     margin: 0;
-    padding: 0.5em 1em;
-    border-radius: 0.3em;
+    padding: 0.6em 1em;
+    border-radius: 0.5em;
     outline: 0;
     font: inherit;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
     -webkit-appearance: none;
+}
 
+.form-control .form-button-medium {
+	display: inline-block;
+    width: 100%;
+    border-width: 0;
+    background-color: var(--color-neutral-dark);
+    color: white;
+    margin: 0;
+    padding: 0.5em 1em;
+    border-radius: 0.7em;
+    outline: 0;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-appearance: none;
+    margin-top: 10px;
 }
 
 
@@ -311,6 +329,7 @@ h3,h4,h5,p {
 }
 
 
+
 .logo-img  {
 	
 	text-align: center;
@@ -327,6 +346,10 @@ h3,h4,h5,p {
 #page-signup {
 	background-color: var(--color-sub-light);
 }
+
+
+
+
 
 
 /* Floater */
@@ -443,6 +466,7 @@ h3,h4,h5,p {
 	flex-direction: column;
 	transition: all 0.3s;
 	box-shadow:  0 0 5px rgba(0,0,0,0.15);
+	
 
 }
 
@@ -554,7 +578,43 @@ h3,h4,h5,p {
 	line-height: 2em;
 }
 
-/*PROFILE */
+
+.detail-box {
+	width: 100%;
+	height: 200px;
+	background-color: var(--color-neutral-medium);
+	border-radius: 0.4em;
+	padding: 10px;
+	margin-top: -10px;
+	
+}
+
+
+.map-sm {
+
+	background-image: url(../img/smallmap.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 0.3px solid lightgrey;
+	height: 200px;
+	border-radius: 0.5em;
+	background-size: cover;
+
+}
+
+.img-cafe-profile {
+	background-image: url(../img/bluebottle.jpg);
+  	height: 200px;
+  	background-position: center;
+  	background-size: 600px;
+    background-repeat: no-repeat;
+}
+
+
+
+/*EDIT PROFILE -CAFE*/
+
+/*USER PROFILE */
 
 .line-left {
 	display: flex;
@@ -563,13 +623,14 @@ h3,h4,h5,p {
 }
 
 .profile-img {
-	width: 150px;
+	width: 130px;
+    height: 100%;
 	margin-left: -10px;
 }
 
 .username {
 	font-size: 1.4em;
-	margin-top: 4.7em;
+	margin-top: 4.1em;
 }
 
 .title-paragraph {
@@ -594,14 +655,9 @@ h3,h4,h5,p {
 	font-size: 0.95em;
 	font-weight: 300;
 	vertical-align: middle;
-	padding: 10px;
 	height: 100%;
 
 }
-
-
-
-
 
 
 
@@ -634,6 +690,7 @@ h3,h4,h5,p {
 	top: 200px;
 	left: 40px;
 	overflow: hidden;
+	
 }
 
 
