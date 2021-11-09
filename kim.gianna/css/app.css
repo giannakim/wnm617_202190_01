@@ -4,7 +4,7 @@
 
 	--color-sub-dark:  #faa707;
 
-	--color-main-light:  #838ff9;
+	--color-main-light:  #6c72a7;
 	--color-main-medium:  #0B0BB5;
 	--color-main-dark:  #151260;
 
@@ -43,6 +43,7 @@ body {
 	color: var(--color-main-dark);
 	font-family: Dosis, sans-serif;
 }
+
 
 
 
@@ -372,6 +373,7 @@ ul li .right {
 	width: 3rem;
 	height: 3rem;
 	text-align: center;
+	padding: 2px;
 	line-height: 0.45em;
 	font-size: 4rem;
 	font-weight: 300;
@@ -523,51 +525,67 @@ ul li .right {
 
 /*LIST ITEM*/
 
-.wholelist{
+.cafelist{
 	margin: 0 auto;
 	padding-left: 0;
 	/*padding-right: 20px;*/
 	width: 100%;
+	padding: 1em;
 }
 
-.list-card {
+
+.cafelist-card {
 	display: flex;
 	width: 100%;
 	height: 110px;
 	background-color: white;
-	margin-bottom: 0.3em;
+	margin-bottom: 0.9em;
+
 	/*border-top-right-radius: 40px;
 	border-bottom-right-radius: 40px;
 	direction: rtl;*/
 }
 
-.list-link {
+
+.cafelist-img {
+	object-fit: cover;
 	display: flex;
-	width: 100%;
-	height: 110px;
-	border-top-right-radius: 40px;
-	border-bottom-right-radius: 40px;
+
 }
 
-.text-wrapper {
+
+
+.cafelist-item{
 	width: 100%;
 	height: 110px;
 	direction: ltr;
-	display: flex;
+	margin-top: 1.5em;
+	margin-left: 20px;
 	justify-content: center;
 	align-items: center;
 }
 
-.img-container {
-	display: flex;
-	direction: ltr;
-	width: 100%;
+
+
+.cafelist-item-name {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 20px;
 }
 
-.list-img {
-	width: 200px;
-	object-fit: cover;
+.cafelist-item-type {
+	color: var(--color-main-light);
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 13px;
+}
 
+.cafelist-item-breed {
+	color: var(--color-main-light);
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 16px;
 }
 
 

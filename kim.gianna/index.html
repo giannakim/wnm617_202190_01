@@ -13,6 +13,9 @@
 	<script src="lib/js/jquery-2.2.4.min.js"></script>
 
 	<script src="js/app.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="js/pages.js"></script>
+	<script src="js/parts.js"></script>
 	<script src="js/signin.js"></script>
 
 	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
@@ -178,158 +181,23 @@
 		
 	</section>
 
-<!--LIST PAGE-->
+<!--LIST PAGE LIST LIST LIST LIST LIST LIST LIST********-->
 
 	<section data-role="page" id="page-list">
 		<header data-role="header">
 			<h1>Lists</h1>
 		</header>
+		<div class="overscroll fill-parent">
+			<div class="cafelist">
 
-		<div data-role="main">
-			
-			<div class="overscroll fill-parent">
-				<ul class="wholelist">
-					<!-- li*10>a[href=#page-cafe-profile]{Cafe $} -->
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 1</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 2</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 3</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 4</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 5</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 6</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 7</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 8</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 9</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 10</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 11</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-					<li class="list-card">
-						<a href="#page-cafe-profile" class="list-link">
-							<div class="text-wrapper">
-								<h4>Cafe 12</h4>
-							</div>
-							<div class="img-container">
-								<img src="img/bluebottle.jpg" class="list-img">
-							</div>
-						</a>
-					</li>
-
-
-
-
-					<!--<li><a href="#page-cafe-profile">Bluebottle</a></li>
-					<li><a href="#page-cafe-profile">The Press</a></li>
-					<li><a href="#page-cafe-profile">Peets Coffee</a></li>
-					<li><a href="#page-cafe-profile">Philz Coffee</a></li>
-					<li><a href="#page-cafe-profile">Caffe Vergnano</a></li>
-					<li><a href="#page-cafe-profile">Florian Cafe</a></li>
-					<li><a href="#page-cafe-profile">Cafe Omotesando</a></li>
-					<li><a href="#page-cafe-profile">Starbucks</a></li>
-				-->
-				</ul>
 			</div>
+		</div>
+		
 
 			<!--POPUP BUTTON-->
-			<div class="floater bottom right">
-				<a href="#" class="btn-circle" data-activate="#list-add-modal2">&plus;</a>
-			</div>
+		<div class="floater bottom right">
+			<a href="#" class="btn-circle" data-activate="#list-add-modal2">&plus;</a>
+		</div>
 
 			<!--MODAL POPUP-->
 			<div class="modal" id="list-add-modal2">
@@ -366,8 +234,6 @@
 		</div>
 
 	
-
-
 
 		<!--NAV BAR-->
 		<footer data-role="footer">
@@ -704,8 +570,8 @@
 			</div>
 		</div>
 	</section>
-		
-			
+
+
 		
 
 	
