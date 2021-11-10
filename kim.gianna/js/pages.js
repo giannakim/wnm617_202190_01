@@ -19,15 +19,26 @@ const RecentPage = async() => {
 	console.log("honk")
 }
 
+
 const UserProfilePage = async() => {
 	let {result,error} = await query({type:'user_by_id', params:[sessionStorage.userId]});
 	if(error) {
 		console.log(error);
 		return;
 	}
-	$("#page-list .cafelist").html(makeAnimalList(result));
+	let [user] = result;
+	$("#page-user-profile [data-role='main']").html(makeUserProfile(user));
 }
 
+
 const CafeProfilePage = async() => {
-	console.log("honk")
+	let {result,error} = await query({type:'animal_by_id', params:[sessionStorage.animalId]});
+	if(error) {
+		console.log(error);
+		return;
+	}
+	let [animal] = result;
+	$(".img-cafe-profile img").attr("src",animal.img);
 }
+
+

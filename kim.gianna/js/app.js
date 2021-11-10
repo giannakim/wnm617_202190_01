@@ -42,6 +42,11 @@ $(()=>{
 		checkUserId();
 	})
 
+	.on("click",".animal-jump",function(e) {
+		if(!$(this).data("id")) throw("No Id on element");
+		sessionStorage.animalId = $(this).data("id")
+		$.mobile.navigate("#page-cafe-profile");
+	})
 
 	.on("click","[data-activate]",function(e){
 

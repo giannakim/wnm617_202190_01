@@ -620,12 +620,12 @@ ul li .right {
 
 }
 
-.img-cafe-profile {
-	background-image: url(../img/bluebottle.jpg);
-  	height: 200px;
-  	background-position: center;
-  	background-size: 600px;
+.img-cafe-profile img {
+	
+  	height: 300px;
     background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
 }
 
 

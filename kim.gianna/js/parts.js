@@ -1,7 +1,7 @@
 
 const makeAnimalList = templater((o)=>`
 <div class="cafelist-card">
-	<a href="#page-cafe-profile" class="display-flex">
+	<a href="#" class="display-flex animal-jump" data-id="${o.id}">
 		<div class="cafelist-img">
 			<img src="${o.img}" alt="">
 		</div>
@@ -16,19 +16,15 @@ const makeAnimalList = templater((o)=>`
 
 
 const makeUserProfile = (o) => `
-<div class="main-detail">
-	<div class=line-one">
-		<div class="profile-image">
-			<img src="${o.img}" alt="">
+<div class="main">
+	<div class="main-detail">
+		<div class=line-one">
+			<img src="${o.img}" class="profile-img" alt="">
+			<div class="username">${o.name}</div>
+			<div class="username">&commat;${o.username}</div>
 		</div>
-		<div class="username">${o.name}</div>
-		<div class="username">&at;${o.username}</div>
 	</div>
 </div>
-<div>
-	<a href="#page-user-setting">Setting</a>
-</div>
-
 `;
 
 
