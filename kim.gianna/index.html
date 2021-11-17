@@ -16,8 +16,16 @@
 	<script src="js/functions.js"></script>
 	<script src="js/pages.js"></script>
 	<script src="js/parts.js"></script>
+	<script src="js/maps.js"></script>
 	<script src="js/signin.js"></script>
 
+	
+
+	<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZBp1yqR28BqwgBnW3_YQG0PASyhVxQI4"
+      async
+    ></script>
+	
 	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 
 	<style>
@@ -108,10 +116,8 @@
 
 		<div data-role="main">
 			
-			
-			
 			<div class="map"></div>
-			<img src="img/icon/flag.png" class="flag">
+			<!--<img src="img/icon/flag.png" class="flag">-->
 
 			<!--POPUP BUTTON-->
 			<div class="floater bottom right">
@@ -132,15 +138,11 @@
 						</div>
 
 						<div class="form-control">
-							<label for="list-add-type" class="form-label">Drink</label>
-							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Drink">
+							<label for="list-add-type" class="form-label">Type</label>
+							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Type">
 						</div>
 						<div class="form-control">
-							<label for="list-add-type" class="form-label">Address</label>
-							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Drink">
-						</div>
-						<div class="form-control">
-							<label for="list-add-type" class="form-label">Date</label>
+							<label for="list-add-breed" class="form-label">Drink</label>
 							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Drink">
 						</div>
 					</div>
@@ -187,22 +189,24 @@
 		<header data-role="header">
 			<h1>Lists</h1>
 		</header>
-		<div class="overscroll fill-parent">
-			<div class="cafelist">
+		<div data-role="main">
+			<div class="overscroll fill-parent">
+				<div class="cafelist">
 
+				</div>
 			</div>
-		</div>
 		
 
+		
 			<!--POPUP BUTTON-->
-		<div class="floater bottom right">
-			<a href="#" class="btn-circle" data-activate="#list-add-modal2">&plus;</a>
-		</div>
+			<div class="floater bottom right">
+				<a href="#" class="btn-circle" data-activate="#list-add-modal2">&plus;</a>
+			</div>
 
 			<!--MODAL POPUP-->
 			<div class="modal" id="list-add-modal2">
 				<div class="modal-back" data-deactivate="#list-add-modal2"></div>
-				<form class="modal-popup form" id="list-add-form" data-ajax="false">
+				<form class="modal-popup form" id="list-add-form2" data-ajax="false">
 					<div class="modal-head">Add Cafe</div>
 
 					<div class="modal-body">
@@ -212,15 +216,11 @@
 						</div>
 
 						<div class="form-control">
-							<label for="list-add-type" class="form-label">Drink</label>
-							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Drink">
+							<label for="list-add-type" class="form-label">Type</label>
+							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Type">
 						</div>
 						<div class="form-control">
-							<label for="list-add-type" class="form-label">Address</label>
-							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Drink">
-						</div>
-						<div class="form-control">
-							<label for="list-add-type" class="form-label">Date</label>
+							<label for="list-add-breed" class="form-label">Drink</label>
 							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Drink">
 						</div>
 					</div>
@@ -230,9 +230,7 @@
 					</div>
 				</form>
 			</div>
-
 		</div>
-
 	
 
 		<!--NAV BAR-->
@@ -279,27 +277,6 @@
 
 			<div class="main-detail">
 
-				<div class="line-one">
-					<img src="img/icon/profile.png" class="profile-img">
-					<div class="username">Gianna Kim</div>
-					<div class="flex-stretch"></div>
-				
-				</div>
-				<div class="space"></div>
-				<div class="line-left">
-					<div class="title-paragraph">
-					Email<br>
-					History<br>
-					Location
-					</div>
-
-					<div class="flex-stretch"></div>
-					<div class="paragraph">
-					dfjdlfdjl@gmail.com<br>
-					0<br>
-					Pleasanton, CA, USA
-					</div>
-				</div>
 
 			</div>
 
@@ -365,7 +342,7 @@
 <!--CAFE PROFILE-->
 	<section data-role="page" id="page-cafe-profile">
 		<header data-role="header">
-			<h1>Detail</h1>
+			<h1>Cafe</h1>
 			<ul>
 				<li>
 					<a href="#" data-rel="back">Back</a>
@@ -379,43 +356,37 @@
 
 		<div data-role="main">
 			<div class="overscroll fill-parent main-detail">
-				<div class="img-cafe-profile">
-					<img src="">
+				<div class="cafe-profile-top">
+					<img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:240px;object-fit:cover">
 				</div>
 				
-				<div class="line-left">
-					<h2>Cafe Name</h2>
-					<div class="flex-stretch"></div>
-					<h2 class="h2-light">Ice Latte</h2>
+				<div class="cafe-profile-middle">
+					<div class="cafename">Cafe Name</div>
+					
+					
 				</div>
-				<div class="line-left">
-					<div class="title-paragraph">
-						Address
-					</div>
+				<div class="cafe-profile-middle">
+					
+					<div class="cafetype">Type</div>
 					<div class="flex-stretch"></div>
-					<div class="paragraph">
-						Hopyward Rd 1929 CA 93820
-					</div>
+					<div class="cafedrink">Drink</div>
 				</div>
 				<br>
-				<div class="line-left">
-					<div class="title-paragraph">
-						Date
-					</div>
+				<div class="cafe-profile-middle">
 					<div class="flex-stretch"></div>
-					<div class="paragraph">
-						Oct 19 2021
-					</div>
+					<div class="description">Description</div>
 				</div>
+
 				<br>
-				
 				<div class="map-sm"></div>
 
+				
+				<div class="arrow">&dtrif;
+				</div>
+			
 				<div class="form-control">
 					<a href="#page-edit-cafe">
-					
 					<input type="submit" value="Edit" class="form-button-medium" data-role="none">
-					
 					</a>
 				</div>
 
@@ -497,20 +468,20 @@
 		<div data-role="main">
 			<div class="main-detail">
 				<div class="form-control">
-					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="edit-cafe-name" data-role="none" placeholder="Cafe">
+					
+					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="cafe-edit-name" data-role="none" placeholder="Name">
 				</div>
 
 				<div class="form-control">
-					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="edit-cafe-drink" data-role="none" placeholder="Drink">
+					
+					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="cafe-edit-type" data-role="none" placeholder="Name">
 				</div>
 
 				<div class="form-control">
-					<input class="form-input" style="border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="edit-cafe-address" data-role="none" placeholder="Address">
+				
+					<input class="form-input" style="border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="cafe-edit-breed" data-role="none" placeholder="Name">
 				</div>
 
-				<div class="form-control">
-					<input class="form-input" style="width: 50%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="edit-cafe-date" data-role="none" placeholder="Date/Month/Year">
-				</div>
 
 				<div class="space" style="margin-bottom:10px;"></div>
 
@@ -541,15 +512,15 @@
 		<div data-role="main">
 			<div class="main-detail">
 				<div class="form-control">
-					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="edit-cafe-name" data-role="none" placeholder="Full Name">
+					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="user-edit-name" data-role="none" placeholder="Full Name">
 				</div>
 
 				<div class="form-control">
-					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="edit-cafe-drink" data-role="none" placeholder="Username">
+					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="user-edit-username" data-role="none" placeholder="Username">
 				</div>
 
 				<div class="form-control">
-					<input class="form-input" style="border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="edit-cafe-address" data-role="none" placeholder="Email">
+					<input class="form-input" style="border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="user-edit-email" data-role="none" placeholder="Email">
 				</div>
 
 				<div class="form-control">

@@ -4,7 +4,7 @@
 
 	--color-sub-dark:  #faa707;
 
-	--color-main-light:  #6c72a7;
+	--color-main-light:  #5e6fff;
 	--color-main-medium:  #0B0BB5;
 	--color-main-dark:  #151260;
 
@@ -324,9 +324,7 @@ ul li .right {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url(../img/map.png);
-	background-size: cover;
-	background-position: center;
+
 }
 
 
@@ -575,22 +573,23 @@ ul li .right {
 }
 
 .cafelist-item-type {
-	color: var(--color-main-light);
+	color: var(--color-neutral-medium);
 	text-decoration: none;
 	font-weight: 400;
 	font-size: 13px;
 }
 
 .cafelist-item-breed {
-	color: var(--color-main-light);
+	color: var(--color-main-dark);
 	text-decoration: none;
 	font-weight: 400;
 	font-size: 16px;
 }
 
 
+
 /*CAFE PROFILE*/
-.line-one {
+.cafename {
 	display: flex;
 	justify-content: right;
 	line-height: 2em;
@@ -617,27 +616,25 @@ ul li .right {
 	height: 200px;
 	border-radius: 0.5em;
 	background-size: cover;
-
 }
 
-.img-cafe-profile img {
-	
-  	height: 300px;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
+.arrow {
+	display: inline-block;
+	align-items: center;
+	font-size: 40px;
+	color: var(--color-main-light);
+	flex: 1 1 auto;
 }
-
 
 
 /*EDIT PROFILE -CAFE*/
 
 /*USER PROFILE */
 
-.line-left {
+.cafe-profile-middle {
 	display: flex;
 	justify-content: left;
-	line-height: 2em;
+	line-height: 1.5em;
 }
 
 .profile-img {
@@ -646,18 +643,22 @@ ul li .right {
 	margin-left: -10px;
 }
 
+.cafename,
 .username {
 	font-size: 1.4em;
-	margin-top: 4.1em;
-}
-
-.title-paragraph {
-	font-size: 1.1em;
 	font-weight: 500;
 }
 
+.cafetype,
+.title-paragraph {
+	font-size: 1.1em;
+	font-weight: 300;
+	color: grey;
+}
 
+.description,
 .paragraph {
+	margin-top: -0.6em;
 	font-size: 1.1em;
 	font-weight: 300;
 	text-align: left;
@@ -674,7 +675,6 @@ ul li .right {
 	font-weight: 300;
 	vertical-align: middle;
 	height: 100%;
-
 }
 
 

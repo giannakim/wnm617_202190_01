@@ -16,6 +16,7 @@ $(()=>{
 			case "page-list": ListPage(); break;
 			case "page-user-profile": UserProfilePage(); break;
 			case "page-cafe-profile": CafeProfilePage(); break;
+			case "page-edit-cafe": CafeEditPage(); break;
 		}
 	})
 
