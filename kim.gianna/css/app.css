@@ -87,7 +87,9 @@ h3,h4,h5,p {
 
 .centered { text-align: center; }
 .small { font-size: 0.9em; }
-
+.position-relative {
+	position: relative;
+}
 
 
 /*PAGE ELEMENT*/
@@ -156,13 +158,22 @@ h3,h4,h5,p {
 
 
 
-[data-role="header"] ul,
-[data-role="footer"] ul {
+[data-role="header"] ul {
 	display: flex;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	position: relative;
+}
+
+[data-role="footer"] ul {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+
+	position: relative;
+	left: 0;
+	right: 0;
 }
 
 [data-role="header"] a,
@@ -186,15 +197,56 @@ ul li .right {
 [data-role="footer"] li {
 	flex: 1 1 auto;
 	text-align: center;
-	background-color: #fffcf4;
 	color: inherit;
 
 }
 
-[data-role="footer"] ul li:active a {
-	background-color: var(--color-main-light);
+
+
+
+
+
+
+
+/*ICONS*/ 
+
+.icon {
+	width: 1.2em;
+	height: 1.2em;
+	display: inline-block;
+	margin-top: 0.5em;
 }
 
+.nav-icon {
+    display: block;
+    line-height: 1rem;
+    color: black;
+    font-size: 1.5rem;
+  
+}
+
+
+
+.nav-icon .icon {
+	vertical-align: middle;
+
+}
+
+
+
+.nav-icon-label {
+	display: block;
+	line-height: 1rem;
+	font-weight: 300;
+	font-size: 0.6em;
+	margin-top: 0.3em;
+}
+
+
+.nav-icon-set li.active{
+   
+
+}
 
 
 .main-center {
@@ -272,6 +324,19 @@ ul li .right {
 
 }
 
+
+.form-input-box {
+
+	border: 1px solid #59513a;
+	background-color: white;
+	margin-top: 10px;
+	width:  100%;
+	display: inline-block;
+    padding: 0.5em 1em;
+    outline: 0;
+    font: inherit;
+}
+
 /*signin,signup button*/
 .form-control .form-button-dark {
 	display: inline-block;
@@ -296,7 +361,7 @@ ul li .right {
     border-width: 0;
     background-color: var(--color-neutral-dark);
     color: white;
-    margin: 0;
+    margin: 0 auto;
     padding: 0.5em 1em;
     border-radius: 0.7em;
     outline: 0;
@@ -305,15 +370,34 @@ ul li .right {
     cursor: pointer;
     text-decoration: none;
     -webkit-appearance: none;
+    left: 0;
+    right: 0;
     margin-top: 10px;
 }
 
 
+.form-button-medium-blue {
+	display: inline-block;
+	justify-content: center;
+	margin: 0 auto;
+    width: 40%;
+    border-width: 0;
+    border-radius: 1em;
+    background-color: var(--color-main-light);
+    color: white;
+    padding: 0.6em 1em;
+    outline: 0;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 
 .ui-mobile .form-label {
 	font-size: 0.9em;
 	margin: 1rem 0 0;
+	color: #c1b9a2;
 
 }
 
@@ -324,7 +408,7 @@ ul li .right {
 	left: 0;
 	width: 100%;
 	height: 100%;
-
+	cursor: pointer;
 }
 
 
@@ -442,13 +526,19 @@ ul li .right {
     background-color: var(--color-neutral-light);
 }
 
-.modal-head,
+.modal-head {
+	background-color: var(--color-neutral-light);
+	line-height: 2rem;
+	padding: 0 1em;
+	color: white;
+}
+
+
 .modal-foot {
 	background-color: var(--color-main-light);
 	line-height: 2rem;
 	padding: 0 1em;
 	color: white;
-
 }
 
 .modal.active .modal-popup {
@@ -494,8 +584,24 @@ ul li .right {
 }
 
 
-.modal-drawer .modal-body {
+/*.modal-drawer .modal-body {
 	flex: 1 1 100%;
+}*/
+
+
+.modal-drawer.basin {
+	height: 30vh;
+	padding: 1em;
+	box-shadow: none;
+	
+
+
+}
+
+.modal-drawer.basin .modal-body {
+	box-shadow:  0 0 5px rgba(0,0,0,0.15);
+	border-radius: 1em;
+	overflow: hidden;
 }
 
 
@@ -607,13 +713,21 @@ ul li .right {
 }
 
 
+.map {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
 .map-sm {
 
-	background-image: url(../img/smallmap.png);
+	
 	background-repeat: no-repeat;
 	background-position: center;
 	border: 0.3px solid lightgrey;
-	height: 200px;
+	height: 170px;
 	border-radius: 0.5em;
 	background-size: cover;
 }
@@ -638,15 +752,39 @@ ul li .right {
 }
 
 .profile-img {
-	width: 130px;
+	width: 100%;
     height: 100%;
-	margin-left: -10px;
-}
+    object-fit: cover;
+    border-radius: 100em;
+    padding: 20px;
+ }
+	
 
-.cafename,
-.username {
+.cafename {
 	font-size: 1.4em;
 	font-weight: 500;
+}
+
+.name {
+	font-size: 1.4em;
+	font-weight: 500;
+	margin: 0;
+	position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.username {
+	font-size: 1.2em;
+	font-weight: 300;
+	top:  20px;
+	margin: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 .cafetype,
@@ -659,7 +797,7 @@ ul li .right {
 .description,
 .paragraph {
 	margin-top: -0.6em;
-	font-size: 1.1em;
+	font-size: 1em;
 	font-weight: 300;
 	text-align: left;
 }
@@ -677,28 +815,15 @@ ul li .right {
 	height: 100%;
 }
 
-
-
-/*ICONS*/ 
-
-.nav-icon {
-    display: block;
-    line-height: 1rem;
-    color: black;
-    height: 130px;
-  
+.padding-md {
+	padding: 1em;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
 }
 
-.icon-img {
-	width: 2rem;
-	display: inline-block;
-	margin-top: 0.5em;
-}
 
-.icon-text {
-	font-weight: 600;
-	font-size: 0.9em;
-}
 
 
 /*MAIN MAP*/
@@ -710,6 +835,46 @@ ul li .right {
 	overflow: hidden;
 	
 }
+
+
+
+ /*CAFEPOPUP*/
+
+.cafe-popup-img,
+.cafe-popup-item {
+	pointer-events: none;
+}
+
+.cafe-popup-img img{
+	max-width: 50px;
+}
+
+.cafe-popup-item {
+	margin-left: 10px;
+
+}
+
+.cafe-popup-name {
+	font-weight: 500;
+	font-size: 16px;
+	font-family: Dosis, sans-serif;
+}
+
+.cafe-popup-type {
+	font-weight: 300;
+	font-size: 13px;
+}
+
+.cafe-popup-breed {
+	font-weight: 400;
+	font-size: 13px;
+}
+
+.modal-back.transparent {
+	background-color: transparent;
+}
+
+
 
 
 

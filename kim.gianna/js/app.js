@@ -15,8 +15,12 @@ $(()=>{
 			case "page-recent": RecentPage(); break;
 			case "page-list": ListPage(); break;
 			case "page-user-profile": UserProfilePage(); break;
+			case "page-edit-user": UserEditPage(); break;
 			case "page-cafe-profile": CafeProfilePage(); break;
 			case "page-edit-cafe": CafeEditPage(); break;
+			case "page-cafe-add": CafeAddPage(); break;
+			case "page-location-choose-animal": LocationChooseAnimalPage(); break;
+			case "page-location-set-location": LocationSetLocationPage(); break;
 		}
 	})
 
@@ -35,6 +39,40 @@ $(()=>{
 	})
 
 
+	.on("submit", "#cafe-add-form", function(e) {
+		e.preventDefault();
+		animalAddForm();
+	})
+
+
+	.on("submit", "#cafe-edit-form", function(e) {
+		e.preventDefault();
+		animalEditForm();
+	})
+
+
+
+
+
+
+	//FORM ANCHOR CLICKS
+	.on("click",".js-submituseredit",function(e) {
+		e.preventDefault();
+		userEditForm();
+	})
+
+	.on("click",".js-submituserpassword",function(e) {
+		e.preventDefault();
+		userEditPasswordForm();
+	})
+
+	.on("click",".js-submitlocationform",function(e) {
+		e.preventDefault();
+		locationAddForm();
+	})
+
+
+
 
 	//ANCHOR CLICKS
 	.on("click",".js-logout",function(e) {
@@ -48,6 +86,32 @@ $(()=>{
 		sessionStorage.animalId = $(this).data("id")
 		$.mobile.navigate("#page-cafe-profile");
 	})
+
+
+	.on("click","[data-setnavigateback]",function(e){
+      $("#location-navigateback").val($(this).data("setnavigateback"))
+   	})
+   	.on("click",".js-navigate-back",function(e){
+      window.history.go(+$("#location-navigateback").val());
+   	})
+
+
+   .on("click",".js-chooseanimal",function(e){
+   	$("#location-animal-choice").val(sessionStorage.animalId);
+		 })
+
+
+
+	.on("click",".animal-profile-middle li",function(e){
+      let id = $(this).index();
+      $(this).addClass("active")
+         .siblings().removeClass("active");
+      $(this).closest(".animal-profile-middle").next().children().eq(id).addClass("active")
+         .siblings().removeClass("active");
+   })
+
+
+
 
 	.on("click","[data-activate]",function(e){
 
@@ -77,11 +141,13 @@ $(()=>{
 
 	//NAV//
 	$({
-		"#page-recent":".nav-icon-set li:nth-child(1)",
-		"#page-list":".nav-icon-set li:nth-child(2)",
-		"#page-user-profile":".nav-icon-set li:nth-child(3",
-	}[location.hash]).addClass("active")
-
-
-
+      "#page-recent":".nav-icon-set li:nth-child(1)",
+      "#page-list":".nav-icon-set li:nth-child(2)",
+      "#page-user-profile":".nav-icon-set li:nth-child(3)",
+   }[location.hash]).addClass("active");
 });
+
+
+
+
+

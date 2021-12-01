@@ -16,6 +16,7 @@
 	<script src="js/functions.js"></script>
 	<script src="js/pages.js"></script>
 	<script src="js/parts.js"></script>
+	<script src="js/forms.js"></script>
 	<script src="js/maps.js"></script>
 	<script src="js/signin.js"></script>
 
@@ -111,74 +112,30 @@
 			<h1>Hello Gianna,</h1>
 		</header>
 
-		
-
-
 		<div data-role="main">
 			
 			<div class="map"></div>
 			<!--<img src="img/icon/flag.png" class="flag">-->
 
+			
+			
+			<!--RECENT MODAL-IT SHOWS SMALL BOX-->
+			<div id="recent-drawer" class="modal">
+				<div class="modal-back transparent" data-deactivate="#recent-drawer"></div>
+				<div class="modal-drawer basin top">
+					<div class="modal-body"></div>
+				</div>
+			</div>
+
 			<!--POPUP BUTTON-->
 			<div class="floater bottom right">
-				<a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
-			</div>
-			
-
-			<!--POPUP MODAL-->
-			<div class="modal" id="list-add-modal">
-				<div class="modal-back" data-deactivate="#list-add-modal"></div>
-				<form class="modal-popup form" id="list-add-form" data-ajax="false">
-					<div class="modal-head">Add Cafe</div>
-
-					<div class="modal-body">
-						<div class="form-control">
-							<label for="list-add-name" class="form-label">Name</label>
-							<input type="text" name="list-add-name" class="form-input" data-role="none"placeholder="Name">
-						</div>
-
-						<div class="form-control">
-							<label for="list-add-type" class="form-label">Type</label>
-							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Type">
-						</div>
-						<div class="form-control">
-							<label for="list-add-breed" class="form-label">Drink</label>
-							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Drink">
-						</div>
-					</div>
-
-					<div class="modal-foot">
-						<button type="submit" class="form-button">Save</button>
-					</div>
-				</form>
+				<a href="#page-location-choose-animal" class="btn-circle" data-setnavigateback="-3">&plus;</a>
 			</div>
 
 		</div>
 
 		<!--NAV BAR-->
-		<footer data-role="footer">
-			<ul>
-				<li>
-					<a href="#page-recent" class="nav-icon">
-						<img class="icon-img" src="img/icon/map.png">
-						<div class="icon-text">Home</div>
-					</a>
-				</li>
-				<li>
-					<a href="#page-list" class="nav-icon">
-						<img class="icon-img" src="img/icon/list.png">
-						<div class="icon-text">List</div>
-					</a>
-				</li>
-
-				<li>
-					<a href="#page-user-profile" class="nav-icon">			
-						<img class="icon-img"  src="img/icon/profilenav.png">
-						<div class="icon-text">Profile</div>
-					</a>
-				</li>
-			</ul>
-		</footer>
+		<footer data-role="footer" data-template="#footer-template"></footer>
 
 		
 	</section>
@@ -197,157 +154,28 @@
 			</div>
 		
 
-		
 			<!--POPUP BUTTON-->
 			<div class="floater bottom right">
-				<a href="#" class="btn-circle" data-activate="#list-add-modal2">&plus;</a>
+				<a href="#page-cafe-add" class="btn-circle" data-activate="#page-cafe-add">&plus;</a>
 			</div>
-
-			<!--MODAL POPUP-->
-			<div class="modal" id="list-add-modal2">
-				<div class="modal-back" data-deactivate="#list-add-modal2"></div>
-				<form class="modal-popup form" id="list-add-form2" data-ajax="false">
-					<div class="modal-head">Add Cafe</div>
-
-					<div class="modal-body">
-						<div class="form-control">
-							<label for="list-add-name" class="form-label">Name</label>
-							<input type="text" name="list-add-name" class="form-input" data-role="none"placeholder="Name">
-						</div>
-
-						<div class="form-control">
-							<label for="list-add-type" class="form-label">Type</label>
-							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Type">
-						</div>
-						<div class="form-control">
-							<label for="list-add-breed" class="form-label">Drink</label>
-							<input type="text" name="list-add-type" class="form-input" data-role="none"placeholder="Drink">
-						</div>
-					</div>
-
-					<div class="modal-foot">
-						<button type="submit" class="form-button">Save</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	
-
-		<!--NAV BAR-->
-		<footer data-role="footer">
-			<ul>
-				<li>
-					<a href="#page-recent" class="nav-icon">
-						<img class="icon-img" src="img/icon/map.png">
-						<div class="icon-text">Home</div>
-					</a>
-				</li>
-				<li>
-					<a href="#page-list" class="nav-icon">
-						<img class="icon-img" src="img/icon/list.png">
-						<div class="icon-text">List</div>
-					</a>
-				</li>
-
-				<li>
-					<a href="#page-user-profile" class="nav-icon">			
-						<img class="icon-img"  src="img/icon/profilenav.png">
-						<div class="icon-text">Profile</div>
-					</a>
-				</li>
-			</ul>
-		</footer>
-
-	</section>
-
-<!--USER PROFILE-->
-
-	<section data-role="page" id="page-user-profile">
-		<header data-role="header">
-			<h1>Profile</h1>
-			<ul>
-				<li>
-					<a href="#" data-rel="back">Back</a>
-					<a href data-activate="#recent-add-modal-user" class="right">Setting</a>
-				</li>
-			</ul>
-		</header>
-
-		<div data-role="main">
-
-			<div class="main-detail">
-
-
-			</div>
-
 
 		</div>
-
-		<!--Modal Top-->
-		<div class="modal" id="recent-add-modal-user">
-			<div class="modal-back" data-deactivate="#recent-add-modal-user"></div>
-			<div class="modal-drawer top">
-				<div class="modal-head display-flex">
-					<div class="flex-stretch"></div>
-					<div class="flex-none">
-						<img src="img/icon/close.svg" class="icon" data-deactivate="#recent-add-modal-user">
-					</div>
-				</div>
-
-				<div class="modal-body">
-					<a href="#page-edit-user">
-						Edit Profile
-					</a>
-				</div>
-
-
-
-				<div class="modal-body">
-					<button class="form-button js-logout">Log Out</button>
-				</div>
-			</div>
-		</div>	
-
-
-		<!--NAV BAR-->
-		<footer data-role="footer">
-			<ul>
-				<li>
-					<a href="#page-recent" class="nav-icon">
-						<img class="icon-img" src="img/icon/map.png">
-						<div class="icon-text">Home</div>
-					</a>
-				</li>
-				<li>
-					<a href="#page-list" class="nav-icon">
-						<img class="icon-img" src="img/icon/list.png">
-						<div class="icon-text">List</div>
-					</a>
-				</li>
-
-				<li>
-					<a href="#page-user-profile" class="nav-icon">			
-						<img class="icon-img"  src="img/icon/profilenav.png">
-						<div class="icon-text">Profile</div>
-					</a>
-				</li>
-			</ul>
-		</footer>
-
 		
-
-
+		<!--NAV BAR-->
+		<footer data-role="footer" data-template="#footer-template"></footer>
 	</section>
 
-<!--CAFE PROFILE-->
+	<!--CAFE PROFILE-->
 	<section data-role="page" id="page-cafe-profile">
 		<header data-role="header">
 			<h1>Cafe</h1>
 			<ul>
 				<li>
 					<a href="#" data-rel="back">Back</a>
-				
-					<a href data-activate="#remove-modal" class="right">Delete</a>
+		
+					
+					<a href="#page-edit-cafe" class="right">Edit
+					</a>
 					
 
 				</li>
@@ -357,41 +185,33 @@
 		<div data-role="main">
 			<div class="overscroll fill-parent main-detail">
 				<div class="cafe-profile-top">
-					<img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:240px;object-fit:cover">
+					<img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:240px; object-fit: cover; border-radius:0.4em;">
 				</div>
 				
 				<div class="cafe-profile-middle">
 					<div class="cafename">Cafe Name</div>
-					
-					
 				</div>
 				<div class="cafe-profile-middle">
-					
 					<div class="cafetype">Type</div>
 					<div class="flex-stretch"></div>
 					<div class="cafedrink">Drink</div>
 				</div>
 				<br>
 				<div class="cafe-profile-middle">
-					<div class="flex-stretch"></div>
 					<div class="description">Description</div>
 				</div>
 
 				<br>
-				<div class="map-sm"></div>
-
-				
-				<div class="arrow">&dtrif;
+				<div class="cafe-profile-bottom">
+					<div class="map-sm"></div>
 				</div>
-			
+
+
 				<div class="form-control">
-					<a href="#page-edit-cafe">
-					<input type="submit" value="Edit" class="form-button-medium" data-role="none">
+					<a href data-activate="#remove-modal" class="form-button-medium" style="background-color: grey;">Delete
 					</a>
 				</div>
-
 			</div>
-
 		</div>
 
 		<!--DELETE POPUP-->
@@ -423,40 +243,50 @@
 
 
 		<!--NAV BAR-->
-		<footer data-role="footer">
-			<ul>
-				<li>
-					<a href="#page-recent" class="nav-icon">
-						<img class="icon-img" src="img/icon/map.png">
-						<div class="icon-text">Home</div>
-					</a>
-				</li>
-				<li>
-					<a href="#page-list" class="nav-icon">
-						<img class="icon-img" src="img/icon/list.png">
-						<div class="icon-text">List</div>
-					</a>
-				</li>
-
-				<li>
-					<a href="#page-user-profile" class="nav-icon">			
-						<img class="icon-img"  src="img/icon/profilenav.png">
-						<div class="icon-text">Profile</div>
-					</a>
-				</li>
-			</ul>
+		<footer data-role="footer" data-template="#footer-template">
+			
 		</footer>
 	</section>
 
+<!--ADD CAFE-->
+	<section data-role="page" id="page-cafe-add">
+
+		<header data-role="header">
+			<h1>Add Cafe</h1>
+			<ul>
+				<li>
+					<a href="#" data-rel="back">Back</a>
+				</li>
+			</ul>
+		</header>
+		
+		
+		<div data-role="main">
+			<form class="fill-parent main-detail" id="cafe-add-form" data-ajax="false">
+				<div class="flex-stretch position-relative">
+					
+					<div class="fill-parent overscroll padding-md">
+					</div>
+				</div>
+
+				<div class="flex-none padding-md">
+					<div class="form-control">
+						<button type="submit" class="form-button-medium-blue">Save</button>
+					</div>
+				</div>
+			</form>
+		</div>
 
 
 
 
 
 
+	</section>
+	
 <!--EDIT CAFE PROFILE-->
 	<section data-role="page" id="page-edit-cafe">
-		<header data-role="header">
+		<header data-role="header" role="banner">
 			<h1>Edit </h1>
 			<ul>
 				<li>
@@ -466,109 +296,257 @@
 		</header>
 
 		<div data-role="main">
-			<div class="main-detail">
-				<div class="form-control">
+			<form class="fill-parent main-detail" id="cafe-edit-form" data-ajax="false">
+				<div class="flex-stretch position-relative">
 					
-					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="cafe-edit-name" data-role="none" placeholder="Name">
+					<div class="fill-parent overscroll padding-md">
+					</div>
 				</div>
 
-				<div class="form-control">
-					
-					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="cafe-edit-type" data-role="none" placeholder="Name">
+				<div class="flex-none padding-md">
+					<div class="form-control">
+						<button type="submit" class="form-button-medium-blue">Save</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+
+	<!--PAGES ADD CAFE FROM MAIN BUTTON-->
+	<section data-role="page" id="page-location-choose-animal">
+		<header data-role="header">
+			<h1>Choose Cafe</h1>
+			<ul>
+				<li><a href="#" data-rel="back">Back</a></li>
+				<li class="flex-stretch"></li>
+				<li><a href="#page-location-set-location" class="ui-link">Next</a></li>
+			</ul>
+		</header>
+		<div class="overscroll fill-parent">
+			<div data-role="main" class="main-detail">
+				<input type="hidden" id="location-animal-choice">
+				<div>
+					<a href="#page-cafe-add">Make a new cafe</a>
 				</div>
 
-				<div class="form-control">
-				
-					<input class="form-input" style="border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="cafe-edit-breed" data-role="none" placeholder="Name">
-				</div>
-
-
-				<div class="space" style="margin-bottom:10px;"></div>
-
-				<div class="form-control">
-					<a href="#page-cafe-profile"  class="ui-link">
-					
-					<input type="submit" value="Save" class="form-button-medium" data-role="none">
-					
-					</a>
+				<p>Or</p>
+				<div>
+					<div class="form-select location-animal-choice-select">
+						
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-<!--*******************-->
+	<section data-role="page" id="page-location-set-location">
+		<header data-role="header">
+			<h1>Set Location</h1>
+			<ul>
+				<li><a href="#" data-rel="back">Back</a></li>
+				<li class="flex-stretch"></li>
+				<li><a href="#page-location-description">Next</a></li>
+			</ul>
+		</header>
 
-<!--EDIT USER!!!! PROFILE-->
+		
+		<div data-role="main">
+			<input type="hidden" id="location-lat">
+			<input type="hidden" id="location-lng">
+			<div class="map"></div>
+		</div>
+		
+	</section>
+
+	<section data-role="page" id="page-location-description">
+		<header data-role="header">
+			<h1>Description</h1>
+			<ul>
+				<li><a href="#" data-rel="back">Back</a></li>
+				<li class="flex-stretch"></li>
+				<li><a href="#" class="js-submitlocationform">Save</a></li>
+			</ul>
+		</header>
+		<div class="overscroll fill-parent">
+			<div data-role="main" class="main-detail">
+				<form action="">
+					<input type="hidden" id="location-navigateback" value="-3">
+
+					<div class="form-control">
+						<label for="location-description" class="form-label">Describe the cafe</label>
+						<textarea id="location-description" class="form-input-box" data-role="none" placeholder="How was the cafe?"></textarea>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+	</section>
+
+
+<!--USER PROFILE-->
+
+	<section data-role="page" id="page-user-profile">
+		<header data-role="header">
+			<h1>Profile</h1>
+			<ul>
+				<li>
+					<a href="#" data-rel="back">Back</a>
+					<a href data-activate="#recent-add-modal-user" class="right">Setting</a>
+				</li>
+			</ul>
+		</header>
+
+		<div data-role="main">
+			<div class="overscroll fill-parent main-detail">
+
+			</div>
+		</div>
+
+		<!--Modal Top--><!--PAGE USER SETTING-->
+		<div class="modal" id="recent-add-modal-user">
+			<div class="modal-back" data-deactivate="#recent-add-modal-user"></div>
+			<div class="modal-drawer top">
+				<div class="modal-head display-flex">
+					<div class="flex-stretch"></div>
+					<div class="flex-none">
+						<img src="img/icon/close.svg" class="icon" data-deactivate="#recent-add-modal-user">
+					</div>
+				</div>
+
+				<div class="modal-body">
+					<li>
+						<a href="#page-edit-user">
+							Edit Profile
+						</a>
+					</li>
+				</div>	
+				
+				<div class="modal-body">
+					<li>
+						<a href="#page-edit-user-password">Change Password</a>
+					</li>
+				</div>
+
+				<div class="modal-body">
+					<button class="form-button js-logout">Log Out</button>
+				</div>
+			</div>
+		</div>	
+
+
+		<!--NAV BAR-->
+		<footer data-role="footer" data-template="#footer-template"></footer>
+	</section>
+
+	
+	
+
+
+	<!--EDIT USER!!!! PROFILE-->
 	<section data-role="page" id="page-edit-user">
 		<header data-role="header">
 			<h1>Edit Profile</h1>
 			<ul>
 				<li>
 					<a href="#" data-rel="back">Back</a>
+					<a href="#" class="right">Save</a>
 				</li>
 			</ul>
 		</header>
 
+
 		<div data-role="main">
-			<div class="main-detail">
-				<div class="form-control">
-					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="user-edit-name" data-role="none" placeholder="Full Name">
-				</div>
-
-				<div class="form-control">
-					<input class="form-input" style="width: 70%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="user-edit-username" data-role="none" placeholder="Username">
-				</div>
-
-				<div class="form-control">
-					<input class="form-input" style="border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="user-edit-email" data-role="none" placeholder="Email">
-				</div>
-
-				<div class="form-control">
-					<input class="form-input" style="width: 50%; border-bottom: 1px solid var(--color-neutral-medium);" type="text" id="edit-cafe-date" data-role="none" placeholder="Location">
-				</div>
-
-				<div class="space" style="margin-bottom:10px;"></div>
-
-				<div class="form-control">
-					<a href="#page-user-profile"  class="ui-link">
+			<form class="fill-parent main-detail" id="user-edit-form" data-ajax="false">
+				<div class="flex-stretch position-relative">
 					
-					<input type="submit" value="Save" class="form-button-medium" data-role="none">
-					
-					</a>
+					<div class="fill-parent overscroll padding-md">
+					</div>
 				</div>
-			</div>
+				<div class="flex-none padding-md">
+					<div class="form-control">
+						<button type="submit" class="js-submituseredit form-button-medium-blue">Save</button>
+					</div>
+				</div>
+				
+			</form>
 		</div>
 	</section>
 
 
-	<script type="text/template" id="footer-template">
+
+	<!--EDIT  USER PASSWORD-->
+	<section data-role="page" id="page-edit-user-password">
+		<header data-role="header">
+			<h1>Edit Password</h1>
+			<ul>
+				<li>
+					<a href="#" data-rel="back">Back</a>
+					<!--<a href="#" class="js-submituserpassword right">Save</a>-->
+				</li>
+			</ul>
+		</header>
+
+
+		<div data-role="main">
+			<form class="fill-parent main-detail" id="user-edit-password" data-ajax="false">
+				<div class="flex-stretch position-relative">
+					
+					<div class="fill-parent overscroll padding-md">
+					</div>
+				</div>
+
+				<div class="flex-none padding-md">
+					<div class="form-control">
+						<label for="user-password-initial" class="form-label">Type Password</label>
+						<input type="password" id="user-password-initial" class="form-input" data-role="none" placeholder="Type a new password">
+					</div>
+
+					<div class="form-control">
+						<label for="user-password-confirm" class="form-label">Confirm Password</label>
+						<input type="password" id="user-password-confirm" class="form-input" data-role="none" placeholder="Confirm new password">
+					</div>
+				</div>
+
+				<div class="flex-none padding-md">
+					<div class="form-control">
+							<button type="submit" class="js-submituserpassword form-button-medium-blue">Save</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	
+
+
+
+	
+
+<!--*******************-->
+
+
+
+
+<script type="text/template" id="footer-template">
 	<ul class="nav-icon-set">
 		<li><a href="#page-recent" data-activateone=".nav-icon-set li:nth-child(1)">
-			<span class="nav-icon"><img class="icon" src="img/icon/map.png"></span>
+			<span class="nav-icon"><img class="icon" src="img/icon/map.png"></scpan>
 			<span class="nav-icon-label">Home</span>
 		</a><li>
 
 		<li><a href="#page-list" data-activateone=".nav-icon-set li:nth-child(2)">
-			<span class="nav-icon"><img class="icon" src="img/icon/list.png"></span>
+			<span class="nav-icon"><img class="icon" src="img/icon/list.png"></scpan>
 			<span class="nav-icon-label">List</span>
 		</a><li>
 
 		<li><a href="#page-user-profile" data-activateone=".nav-icon-set li:nth-child(3)">
-			<span class="nav-icon"><img class="icon" src="img/icon/profilenav.png"></span>
+			<span class="nav-icon"><img class="icon" src="img/icon/profilenav.png"></scpan>
 			<span class="nav-icon-label">Profile</span>
 		</a><li>
-	</script>
+	</ul>
+</script>
 
 
-
-
-
-
-
-
-
-		
-
-	
 </body>
 </html>
