@@ -16,17 +16,22 @@ const makeAnimalList = templater((o)=> `
 
 
 const makeUserProfile = (o) => `
-<div class="main">
-	<div class="overscroll fill-parent main-detail">
-		<div class=line-one">
-			<img src="${o.img}" class="profile-img" alt="">
-			<div class="name">${o.name}</div>
-			<div class="space"></div>
-			<div class="username">&commat;${o.username}</div>
-			<div class="username">&commat;${o.email}</div>
+
+<div class="line-one">
+	<div class="cafe-profile-top">
+		<img src="${o.img}" class="user-profile-image" alt="">
+		<div class="floater bottom right">
+			<a href="#page-user-upload" style="font-size: 1.3em;">
+				<img src="img/icon/pencil.svg" class="icon edit">
+			</a>
 		</div>
 	</div>
+	<div class="name">${o.name}</div>
+	<div class="space"></div>
+	<div class="username">&commat;${o.username}</div>
+	<div class="username">&commat;${o.email}</div>
 </div>
+
 `;
 
 
@@ -34,7 +39,6 @@ const makeAnimalProfile = (o) => `
 <div class="main">
 	<div class="overscroll fill-parent main-detail">
 		<div class=line-one">
-			
 			<div class="cafename">${o.name}</div>
 			<div class="space"></div>
 			<div class="cafetype">${o.type}</div>
@@ -91,7 +95,7 @@ ${FormControlInput({
 ${FormControlInput({
 	namespace:namespace,
 	name:"type",
-	displayname:"Cafe/Bar..etc",
+	displayname:"Cafe/Espresso bar/Juice bar/Dessert",
 	type:"text",
 	placeholder:"Type The Type",
 	value:o.type
@@ -146,13 +150,38 @@ ${FormControlInput({
 
 
 
-const makeAnimalChoiceSelect = ({animals,name,chosen=0}) => `
+const makeAnimalChoiceSelect = ({animals, name, chosen=0}) => `
 <select id="${name}">
    ${templater(o=>`
       <option value="${o.id}" ${o.id===chosen?'selected':''}>${o.name}</option>
    `)(animals)}
 </select>
 `;
+
+
+const makeAnimalListSet = (arr,target="#page-list .cafelist") => {
+	$(".filter-bar").html(makeFilterList(arr));
+	$(target).html(makeAnimalList(arr));
+}
+
+
+const capitalize = s => s[0].toUpperCase()+s.substr(1);
+
+const filterList = (animals,type) => {
+   let a = [...(new Set(animals.map(o=>o[type])))];
+   return templater(o=>o?`<a href="#" data-filter="${type}" data-value="${o}">${capitalize(o)}</a>`:'')(a);
+}
+
+
+const makeFilterList = (animals) => {
+   return `
+   <a href="#" data-filter="type" data-value="">All</a>
+   <div>|</div>
+   ${filterList(animals,'type')}
+   <div>|</div>
+   ${filterList(animals,'breed')}
+   `;
+}
 
 
 

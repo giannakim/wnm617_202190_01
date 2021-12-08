@@ -11,12 +11,12 @@ const resultQuery = async (options) => {
 
 
 const ListPage = async() => {
-	let result = await resultQuery({
-		type:'animals_by_user_id',
-		params:[sessionStorage.userId]
-	});
+		let animals = await resultQuery({
+			type:'animals_by_user_id',
+			params:[sessionStorage.userId]
+		});
 
-	$("#page-list .cafelist").html(makeAnimalList(result));
+		makeAnimalListSet(animals);
 }
 
 const RecentPage = async() => {
@@ -87,7 +87,7 @@ const CafeProfilePage = async() => {
 	});
 
 	let [animal] = animal_result;
-	$(".cafe-profile-top img").attr("src",animal.img);
+	$(".cafe-profile-top>img").attr("src",animal.img);
 	$(".cafe-profile-middle .cafename").html(animal.name);
 	$(".cafe-profile-middle .cafetype").html(animal.type);
 	$(".cafe-profile-middle .cafedrink").html(animal.breed);
@@ -138,6 +138,7 @@ const CafeAddPage = async() => {
 
 
 
+
 const LocationSetLocationPage = async() => {
    let mapEl = await makeMap("#page-location-set-location .map");
    makeMarkers(mapEl,[]);
@@ -150,7 +151,7 @@ const LocationSetLocationPage = async() => {
 }
 
 
-const LocationChooseAnimalPage = async() => {
+const LocationChooseCafePage = async() => {
    let result = await resultQuery({
       type:'animals_by_user_id',
       params:[sessionStorage.userId]
@@ -164,6 +165,7 @@ const LocationChooseAnimalPage = async() => {
          name:'location-animal-choice-select'
       })
    );
+	
 }
 
 

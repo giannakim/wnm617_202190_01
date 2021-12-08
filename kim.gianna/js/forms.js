@@ -39,26 +39,46 @@ const animalEditForm = async () => {
 
 
 
+const checkSignup = async () => {
+   let email = $("#signup-email").val();
+   let username = $("#signup-username").val();
+   let password = $("#signup-password").val();
+   let confirm = $("#signup-password2").val();
 
-
-
-
-const userAddForm = async () => {
-   let name = $("#user-add-name").val();
-   let type = $("#user-add-type").val();
-   let breed = $("#user-add-breed").val();
+   if(password!=confirm)
+      throw("Passwords don't match");
 
    let r = await query({
       type:'insert_user',
-      params:[name,type,breed,description,sessionStorage.animalId]
+      params:[username,email,password]
    });
 
    if(r.error) throw(r.error);
 
-   history.go(-1);
+   sessionStorage.userId = r.id;
+
+   $.mobile.navigate("#page-signup2");
 }
 
+
+const checkSignup2 = async () => {
+   let name = $("#signup-name").val();
+   let image = $("#signup-image-name").val();
+
+   let r = await query({
+      type:'update_user_onboard',
+      params:[name,image,sessionStorage.userId]
+   });
+
+   if(r.error) throw(r.error);
+
+   $.mobile.navigate("#page-list");
+}
+
+
+
 const userEditForm = async () => {
+
    let username = $("#user-edit-username").val();
    let name = $("#user-edit-name").val();
    let email = $("#user-edit-email").val();
@@ -106,6 +126,29 @@ const locationAddForm = async () => {
 }
 
 
+const checkSearchForm = async (s) => {
+   let animals = await query({
+      type: 'search_animals',
+      params:[s,sessionStorage.userId]
+   });
+
+
+   if(animals.error) throw(animals.error);
+
+   makeAnimalListSet(animals.result);
+}
+
+const checkFilter = async (f,v) => {
+   let animals = await query({
+      type:'filter_animals',
+      params:[f,v,sessionStorage.userId]
+   });
+
+
+   if(animals.error) throw(animals.error);
+
+   makeAnimalListSet(animals.result);
+}
 
 
 
