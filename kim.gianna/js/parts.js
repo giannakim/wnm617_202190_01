@@ -17,21 +17,29 @@ const makeAnimalList = templater((o)=> `
 
 const makeUserProfile = (o) => `
 
-<div class="line-one">
-	<div class="cafe-profile-top">
-		<img src="${o.img}" class="user-profile-image" alt="">
-		<div class="floater bottom right">
-			<a href="#page-user-upload" style="font-size: 1.3em;">
-				<img src="img/icon/pencil.svg" class="icon edit">
-			</a>
-		</div>
-	</div>
-	<div class="name">${o.name}</div>
-	<div class="space"></div>
-	<div class="username">&commat;${o.username}</div>
-	<div class="username">&commat;${o.email}</div>
-</div>
+<div class="main">
+	<div class="overscroll fill-parent main-detail">
+		
+		<div class="cafe-profile-top">
+			<img src="${o.img}" class="user-profile-image" alt="">
+			<div class="floater bottom right">
+				<a href="#page-user-upload" style="font-size: 1.3em;">
+					<img src="img/icon/pencil.svg" class="icon edit">
+				</a>
+			</div>
 
+			<div class="name">${o.name}</div>
+		</div>
+		
+		
+		
+		<div class="space"></div>
+		<div class="username">&commat;${o.username}</div>
+		<div class="username">&commat;${o.email}</div>
+
+		
+	</div>
+</div>
 `;
 
 

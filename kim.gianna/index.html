@@ -126,7 +126,7 @@
 				<div class="form-control">
 					
 					<input type="hidden" id="signup-image-name">
-					<label for="signup-username" class="image-picker thumbnail">
+					<label class="image-picker thumbnail2">
 						<input type="file" data-role="none">
 					</label>
 					
@@ -145,7 +145,7 @@
 
 	<section data-role="page" id="page-recent">
 		<header data-role="header">
-			<h1>Hello Gianna,</h1>
+			<h1>Welcome!</h1>
 		</header>
 
 		<div data-role="main">
@@ -223,22 +223,17 @@
 			</ul>
 		</header>
 
-<!--I will add into the pencil link-->
-<a href data-activate="#upload-cafe-modal" style="font-size: 1.3em;">
-	<img src="img/icon/pencil.svg" class="icon edit" style="margin:0; width: 30px; padding:0.2em;">
-</a>
-
-
 
 		<div data-role="main">
 			<div class="overscroll fill-parent main-detail">
 				<div class="cafe-profile-top">
-					<img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:240px; object-fit: cover; border-radius:0.4em;">
+					<img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:240px; object-fit: cover; border-radius:0.4em; border: 1px solid #c1b9a2;">
 					<div class="floater bottom right">
 						<a href="#page-animal-edit-upload" style="font-size: 1.3em;">
 							<img src="img/icon/pencil.svg" class="icon edit" style="margin:0; width: 30px; padding:0.2em;">
 						</a>
 					</div>
+
 				</div>
 				
 				<div class="cafe-profile-middle">
@@ -283,7 +278,6 @@
 			<ul>
 				<li>
 					<a href="#" data-rel="back">Back</a>
-					
 				</li>
 			</ul>
 		</header>
@@ -292,7 +286,7 @@
 		<div data-role="main">
 			
 			<input type="hidden" id="animal-upload-filename">
-			<label class="image-picker replace">
+			<label class="image-picker replace thumbnail">
 				<input type="file" data-role="none">
 			</label>
 
@@ -306,38 +300,20 @@
 	</section>
 
 	<!--Modal Top-UPLOAD_CAFE_MODAL-->
-		<div class="modal" id="upload-cafe-modal">
-			<div class="modal-back" data-deactivate="#recent-add-modal-user"></div>
+		<div class="modal" id="page-animal-edit-upload-modal">
+			<div class="modal-back" data-deactivate="#page-animal-edit-upload-modal"></div>
 			<div class="modal-drawer top">
-				<div class="modal-head display-flex">
-					<div class="flex-stretch"></div>
-					<div class="flex-none">
-						<img src="img/icon/close.svg" class="icon" data-deactivate="#recent-add-modal-user">
-					</div>
-				</div>
+				<div class="modal-body">
+					<input type="hidden" id="animal-upload-filename">
+					<label class="image-picker replace thumbnail">
+						<input type="file" data-role="none">
+					</label>
 
-				<div class="modal-body">
-					<li>
-						<a href="#page-edit-user">
-							Edit Profile
-						</a>
-					</li>
-				</div>	
-				
-				<div class="modal-body">
-					<li>
-						<a href="#page-edit-user-password">Change Password</a>
-					</li>
-				</div>
-
-				<div class="modal-body">
-					<li>
-						<a href="#page-user-upload">Change Photo</a>
-					</li>
-				</div>
-
-				<div class="modal-body">
-					<button class="form-button js-logout">Log Out</button>
+					<div class="flex-none padding-md" style="padding-top: 20em;">
+						<div class="form-control">
+							<button type="submit" class="js-submitanimalupload form-button-medium-blue">Save</button>
+						</div>
+					</div>	
 				</div>
 			</div>
 		</div>	
@@ -478,7 +454,7 @@
 
 	<section data-role="page" id="page-location-set-location">
 		<header data-role="header">
-			<h1>Set Location</h1>
+			<h1>Add Location</h1>
 			<ul>
 				<li><a href="#" data-rel="back">Back</a></li>
 				<li class="flex-stretch"></li>
@@ -501,21 +477,20 @@
 			<ul>
 				<li><a href="#" data-rel="back">Back</a></li>
 				<li class="flex-stretch"></li>
-				<li><a href="#" class="js-submitlocationform">Save</a></li>
+				<li><a href="#" class="js-submitlocationform ui-link">Save</a></li>
 			</ul>
 		</header>
-		<div class="overscroll fill-parent">
-			<div data-role="main" class="main-detail">
-				<form action="">
-					<input type="hidden" id="location-navigateback" value="-3">
-					<div class="form-control">
-						<label for="location-description" class="form-label-big">Describe the cafe</label>
-						<textarea id="location-description" class="form-input-box" data-role="none" placeholder="How was the cafe?"></textarea>
-					</div>
-				</form>
-				
-			</div>
+		
+		<div data-role="main" class="main-detail">
+			<form action="">
+				<input type="hidden" id="location-navigateback" value="-3">
+				<div class="form-control">
+					<label for="location-description" class="form-label-big">Describe the cafe</label>
+					<textarea id="location-description" class="form-input-box" data-role="none" placeholder="How was the cafe?"></textarea>
+				</div>
+			</form>
 		</div>
+		
 	</section>
 
 
@@ -538,7 +513,13 @@
 
 		<div data-role="main">
 				<div class="overscroll fill-parent main-detail">
-					
+					<div class="cafe-profile-middle">
+						<div class="cafetype">username</div>
+					</div>
+					<div class="cafe-profile-middle">
+						<div class="flex-stretch"></div>
+						<div class="cafedrink">email</div>
+					</div>
 					
 
 				</div>
@@ -570,11 +551,6 @@
 					</li>
 				</div>
 
-				<div class="modal-body">
-					<li>
-						<a href="#page-user-upload">Change Photo</a>
-					</li>
-				</div>
 
 				<div class="modal-body">
 					<button class="form-button js-logout">Log Out</button>
@@ -626,7 +602,7 @@
 	<!--UPLOAD PROFILE IMAGE PHOTO PHOTO-->
 	<section data-role="page" id="page-user-upload">
 		<header data-role="header">
-			<h1>Upload Photo</h1>
+			<h1>Edit Profile Photo</h1>
 			<ul>
 				<li>
 					<a href="#" data-rel="back">Back</a>
@@ -634,11 +610,10 @@
 			</ul>
 		</header>
 
-
 		<div data-role="main">
 			
 			<input type="hidden" id="user-upload-filename">
-			<label class="image-picker replace">
+			<label class="image-picker replace thumbnail">
 				<input type="file" data-role="none">
 			</label>
 
@@ -647,7 +622,6 @@
 					<button type="submit" class="js-submituserupload form-button-medium-blue">Save</button>
 				</div>
 			</div>
-				
 		
 		</div>
 	</section>

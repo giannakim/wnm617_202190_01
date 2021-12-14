@@ -9,7 +9,6 @@ const query = (options) => {
 }
 
 
-
 const checkUpload = (file) => {
 	let fd = new FormData();
 	fd.append("image",file);
@@ -19,8 +18,6 @@ const checkUpload = (file) => {
 		body:fd,
 	}).then(d=>d.json());
 }
-
-
 
 
 

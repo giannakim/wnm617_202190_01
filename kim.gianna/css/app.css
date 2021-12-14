@@ -108,7 +108,6 @@ h3,h4,h5,p {
 
 [data-role="main"] {
 	flex: 1 1 100%;
-	height: var(--header-height);
 	position: relative;
 	/*****position: relative;->map image resized well*/
 	font-size: 1em;
@@ -541,7 +540,7 @@ ul li .right {
 /* Floater */
 .floater { position: absolute; }
 .floater.left { left:1em; }
-.floater.right { right:1em; }
+.floater.right { right:0.8em; }
 .floater.top{ 
 	top:1em; 
 	left: 1em;
@@ -746,10 +745,11 @@ ul li .right {
 
 .icon.edit {
 	background-color: #f5e2ae;
+	border: 1px solid #c1b9a2;;
 	width: 40px;
     border-radius: 100%;
     padding: 0.3em;
-    margin-right: 40px;
+    margin-right: 49px;
 }
 
 /*TEXT*/
@@ -919,7 +919,7 @@ ul li .right {
 	
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    
     border-radius: 100em;
     
  }
@@ -929,7 +929,7 @@ ul li .right {
 	margin: 0 auto;
  	border-radius: 50%;
     background-color: var(--color-neutral-light);
-    object-fit: contain;
+    object-fit: cover;
     width: 300px;
     height: 300px;
     overflow: hidden;
@@ -949,10 +949,11 @@ ul li .right {
 	font-weight: 500;
 	margin: 0;
 	position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color:  black;
 }
 
 .username {
@@ -1080,11 +1081,13 @@ ul li .right {
 
 
 .image-picker.replace {
-	position: absolute;
+	position: flex;
+	justify-content: center;
+	margin: 0 auto;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 50%;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1095,24 +1098,61 @@ ul li .right {
 }
 
 
+.image-picker input {
+  display:none;
+}
+
+.image-picker {
+  cursor:pointer;
+  color:white;
+  background-color:rgba(0,0,0,0.3);
+}
+/* This will add the floating plus symbol to the imagepicker */
+.image-picker:before {
+  content:'+';
+  position:absolute;
+  font-size:4em;
+  vertical-align:middle;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color: #5e6fff;
+}
+/* This will hide the plus symbol behind the background of the imagepicker if the class "picked" is added to the element */
+.image-picker.picked:before {
+  z-index:-10;
+}
+
+
 .thumbnail {
   position:relative;
   display:inline-block;
   width:6em;
   height:6em;
-  border-radius:0.6em;
-  border:0.25em solid white;
+  border-bottom: 1px solid #c1b9a2;
   vertical-align:middle;
-  box-shadow:0 0.15em 0.35em 0.1em rgba(0,0,0,0.2);
   margin:0.5em;
-  
+  background-color: #f6f3e7;
   background-position:center;
   background-size:cover;
 }
+.thumbnail2 input,
 .thumbnail input {
    display: none;
 }
 
+.thumbnail2 {
+  position:relative;
+  display:inline-block;
+  width:6em;
+  height:6em;
+  border 1px solid #c1b9a2;
+  vertical-align:middle;
+  margin:0.5em;
+  background-color: #c1b9a2;
+  background-position:center;
+  background-size:cover;
+}
 
 
 

@@ -156,7 +156,8 @@ function makeStatement($data) {
          /*CREATE*/
 
          case "insert_user":   
-            $r = makeQuery($c,"SELECT id FROM `track_users` WHERE `username`=? OR `email` = ?",$p);
+            $r = makeQuery($c,"SELECT id FROM `track_users` WHERE `username`=? OR `email` = ?",[$p[0],$p[1]]);
+            if(isset($r['error'])) return $r;
             if(count($r['result'])) return ["error"=>"Username or Email already exists"];
 
             $r = makeQuery($c,"INSERT INTO
@@ -165,7 +166,8 @@ function makeStatement($data) {
                VALUES
                (?, ?, md5(?), 'http://via.placeholder.com/400/?text=USER', NOW())
                ",$p,false);
-            return ["id" => $c->lastInsertId()];
+            $r['id'] = $c->lastInsertId();
+            return $r;
 
 
          case "insert_animal":
@@ -186,7 +188,7 @@ function makeStatement($data) {
                `track_locations`
                (`animal_id`, `lat`, `lng`, `description`, `photo`, `icon`, `date_create`)
                VALUES
-               (?, ?, ?, ?, 'http://via.placeholder.com/400/?text=PHOTO', 'http://via.placeholder.com/400/?text=ICON', NOW())
+               (?, ?, ?, ?, 'http://via.placeholder.com/400/?text=PHOTO', 'http://giannakim.com/aau/wnm617/kim.gianna/img/icon/flag.png', NOW())
                ",$p,false);
             return ["id" => $c->lastInsertId()];
 
@@ -203,7 +205,19 @@ function makeStatement($data) {
                   `email` = ?
                WHERE `id` = ?
                ",$p,false);
-            return ["result" => "success"];
+            return $r;
+
+         case "update_user_onboard":
+            $r = makeQuery($c,"UPDATE
+               `track_users`
+               SET
+                  `name` = ?,
+                  `img` = ?
+               WHERE `id` = ?
+               ",$p,false);
+            return $r;
+
+
 
          case "update_user_password":
             $r = makeQuery($c,"UPDATE
@@ -211,15 +225,15 @@ function makeStatement($data) {
                SET`password` = md5(?)
                WHERE `id` = ?
                ",$p,false);
-            return ["result" => "success"];
-
+            return $r;
+            
          case "update_user_image":
             $r = makeQuery($c,"UPDATE
                `track_users`
                SET`img` = ?
                WHERE `id` = ?
                ",$p,false);
-            return ["result" => "success"];
+            return $r;
 
 
          case "update_animal":
@@ -232,7 +246,7 @@ function makeStatement($data) {
                   `description` = ?
                WHERE `id` = ?
                ",$p,false);
-            return ["result" => "success"];
+            return $r;
 
          case "update_animal_image":
             $r = makeQuery($c,"UPDATE
@@ -240,7 +254,7 @@ function makeStatement($data) {
                SET`img` = ?
                WHERE `id` = ?
                ",$p,false);
-            return ["result" => "success"];
+            return $r;
 
          
          case "update_location":
@@ -249,7 +263,7 @@ function makeStatement($data) {
                SET`description` = ?
                WHERE `id` = ?
                ",$p,false);
-            return ["result" => "success"];
+            return $r;
 
 
          /*DELETE CAFE*/

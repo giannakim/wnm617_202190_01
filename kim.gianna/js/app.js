@@ -29,9 +29,18 @@ $(()=>{
 	.on("submit","#signin-form",function(e) {
 		e.preventDefault();
 
-
 		checkSigninForm();
 	})
+
+	.on("submit","#signup-form",function(e) {
+		e.preventDefault();
+		checkSignup();
+	})
+
+	.on("submit", "#signup-form2",function(e) {
+      e.preventDefault();
+      checkSignup2();
+   })
 
 
 	.on("submit","#list-add-form",function(e) {
@@ -73,7 +82,7 @@ $(()=>{
 		userEditPasswordForm();
 	})
 
-	.on("click",".js-submitlocationform",function(e) {
+	.on("click",".js-submitlocationform",function(e){
 		e.preventDefault();
 		locationAddForm();
 	})
@@ -87,13 +96,13 @@ $(()=>{
 
 
 
-	.on("change",".image-picker.replace input",function(e){
+	.on("change",".image-picker input",function(e){
 		checkUpload(this.files[0])
 		.then(d=>{
 			console.log(d);
 			$(this).parent().prev().val("uploads/"+d.result);
-			$(this).parent().css({
-				"background-image":`url(uploads/${d.result})`
+			$(this).parent().addClass('picked').css({
+				"background-image":`url('uploads/${d.result}')`
 			});
 		})
 	})
@@ -118,7 +127,7 @@ $(()=>{
 		}).then(d=>{
 			if(d.error) throw(d.error);
 
-			history.go(-1);
+			history.go(-1); 
 		})
 	})
 
@@ -198,11 +207,17 @@ $(()=>{
 		$(target).toggleClass("active");
 	})
 
-
+	.on("click","[data-activateone]",function(e){
+      let target = $(this).data("activateone");
+      $(target).addClass("active").siblings().removeClass('active');
+   })
+   ;
+   
 	 $("[data-template]").each(function(){
     let target = $(this).data("template");
     $(this).html($(target).html());
   	})
+
 
 
 

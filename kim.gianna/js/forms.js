@@ -72,7 +72,7 @@ const checkSignup2 = async () => {
 
    if(r.error) throw(r.error);
 
-   $.mobile.navigate("#page-list");
+   $.mobile.navigate("#page-recent");
 }
 
 
